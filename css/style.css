@@ -1,0 +1,620 @@
+/* =========================================
+   RESET
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   BODY
+   ========================================= */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #111;
+    color: #fff;
+}
+
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+.header {
+    position: relative;
+
+    width: 100%;
+
+    background-color: #000;
+
+    overflow: hidden;
+}
+
+
+/* Banner
+   NÃO ALTERAR O TAMANHO DA IMAGEM
+*/
+
+.header > img {
+    width: 100%;
+    display: block;
+}
+
+
+/* Conteúdo sobre o banner */
+
+.header-conteudo {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 20px 5%;
+
+    background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.25),
+        rgba(0, 0, 0, 0.05),
+        rgba(0, 0, 0, 0.25)
+    );
+}
+
+
+/* =========================================
+   LOGO
+   ========================================= */
+
+.logo {
+    width: 250px;
+
+    display: flex;
+    flex-direction: column;
+
+    margin-right: auto;
+}
+
+.logo strong {
+    font-family: Georgia, serif;
+
+    font-size: 34px;
+
+    color: #d00000;
+
+    letter-spacing: -2px;
+
+    text-shadow:
+        2px 2px 0 #000,
+        0 0 10px #000;
+}
+
+.logo span {
+    font-size: 15px;
+
+    letter-spacing: 7px;
+
+    color: #fff;
+
+    margin-top: 2px;
+}
+
+
+/* =========================================
+   MENU
+   ========================================= */
+
+nav {
+    display: flex;
+
+    align-items: center;
+
+    gap: 28px;
+}
+
+nav a {
+    color: #fff;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav a.ativo {
+    color: #e00000;
+}
+
+
+/* =========================================
+   AÇÕES
+   ========================================= */
+
+.acoes {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-left: 30px;
+}
+
+.icone {
+    position: relative;
+
+    background: none;
+
+    border: none;
+
+    color: #fff;
+
+    font-size: 21px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.icone:hover {
+    transform: scale(1.15);
+}
+
+.carrinho-icone span {
+    position: absolute;
+
+    top: -8px;
+    right: -10px;
+
+    width: 18px;
+    height: 18px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background-color: #d00000;
+
+    color: #fff;
+
+    font-size: 11px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   MAIN
+   ========================================= */
+
+main {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 45px 30px 60px;
+}
+
+main > h1 {
+    text-align: center;
+
+    font-size: 28px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 35px;
+
+    color: #fff;
+}
+
+
+/* =========================================
+   PRODUTOS
+   ========================================= */
+
+.produtos {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+}
+
+
+/* =========================================
+   CARD
+   ========================================= */
+
+.card {
+    width: 280px;
+
+    background-color: #1a1a1a;
+
+    border: 1px solid #333;
+
+    border-radius: 6px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.5);
+
+    transition:
+        transform 0.3s,
+        border-color 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+
+    border-color: #555;
+}
+
+
+/* =========================================
+   ÁREA DA IMAGEM
+   ========================================= */
+
+.produto-imagem {
+    width: 100%;
+
+    height: 280px;
+
+    perspective: 1000px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   CARTA 3D
+   ========================================= */
+
+.produto-imagem-inner {
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+
+    transform-style: preserve-3d;
+
+    transition:
+        transform 0.8s ease;
+}
+
+
+/* Frente e verso */
+
+.produto-frente,
+.produto-verso {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    backface-visibility: hidden;
+
+    -webkit-backface-visibility: hidden;
+}
+
+
+/* Imagens */
+
+.produto-frente img,
+.produto-verso img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* Verso */
+
+.produto-verso {
+    transform: rotateY(180deg);
+}
+
+
+/* Hover */
+
+.produto-imagem:hover .produto-imagem-inner {
+    transform: rotateY(180deg);
+}
+
+
+/* Clique */
+
+.produto-imagem.virado .produto-imagem-inner {
+    transform: rotateY(180deg);
+}
+
+
+/* =========================================
+   CONTEÚDO DO CARD
+   ========================================= */
+
+.card-conteudo {
+    padding: 18px;
+}
+
+.card h2 {
+    font-size: 18px;
+
+    margin-bottom: 10px;
+
+    color: #fff;
+
+    letter-spacing: 1px;
+}
+
+.card p {
+    color: #aaa;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    min-height: 42px;
+}
+
+
+/* =========================================
+   PREÇO
+   ========================================= */
+
+.preco {
+    color: #fff !important;
+
+    font-size: 22px !important;
+
+    font-weight: bold;
+
+    margin: 15px 0;
+
+    min-height: auto !important;
+}
+
+
+/* =========================================
+   BOTÃO
+   ========================================= */
+
+.btn-comprar {
+    width: 100%;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 4px;
+
+    background-color: #d00000;
+
+    color: #fff;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s,
+        transform 0.2s;
+}
+
+.btn-comprar:hover {
+    background-color: #a00000;
+
+    transform: scale(1.02);
+}
+
+
+/* ===============================
+   CARRINHO
+   =============================== */
+
+.carrinho {
+    position: fixed;
+    top: 90px;
+    right: 30px;
+    width: 380px;
+    max-width: calc(100% - 40px);
+    padding: 25px;
+    background-color: #181818;
+    border: 1px solid #444;
+    border-radius: 6px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    display: none;
+}
+
+.carrinho h2 {
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #444;
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.carrinho > p {
+    color: #aaa;
+}
+
+
+/* ITEM DO CARRINHO */
+
+.item-carrinho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 0;
+    border-bottom: 1px solid #333;
+}
+
+.item-carrinho div {
+    flex: 1;
+}
+
+.item-carrinho strong {
+    color: #fff;
+    font-size: 14px;
+}
+
+.item-carrinho p {
+    margin-top: 6px;
+    color: #999;
+    font-size: 13px;
+}
+
+.item-carrinho > strong {
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+
+/* TOTAL */
+
+.total-carrinho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding-top: 18px;
+    border-top: 2px solid #555;
+}
+
+.total-carrinho span {
+    color: #aaa;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.total-carrinho strong {
+    color: #e00000;
+    font-size: 22px;
+}
+
+
+/* =========================================
+   RESPONSIVO
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .header-conteudo {
+        padding: 15px 3%;
+    }
+
+    .logo {
+        width: 190px;
+    }
+
+    .logo strong {
+        font-size: 25px;
+    }
+
+    .logo span {
+        font-size: 11px;
+
+        letter-spacing: 4px;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .acoes {
+        margin-left: 15px;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .header-conteudo {
+        position: relative;
+
+        height: auto;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 15px;
+
+        padding: 15px;
+    }
+
+    .header > img {
+        display: none;
+    }
+
+    .logo {
+        width: 100%;
+
+        align-items: center;
+
+        margin: 0;
+    }
+
+    .logo strong {
+        font-size: 48px;
+    }
+    
+    .logo span {
+        font-size: 18px;
+        letter-spacing: 8px;
+    }
+
+    nav {
+        order: 2;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .acoes {
+        order: 3;
+
+        margin: 0;
+    }
+
+    .produtos {
+        gap: 20px;
+    }
+}

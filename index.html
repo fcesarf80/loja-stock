@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>STOCK</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <img src="img/banner.jpg" alt="Banner da loja Sepultura Rock Wear">
+
+        <div class="header-conteudo">
+
+            <div class="logo">
+                <strong>SEPULTURA</strong>
+                <span>ROCK WEAR</span>
+            </div>
+
+            <nav>
+                <a href="#">INÍCIO</a>
+                <a href="#" class="ativo">PRODUTOS</a>
+                <a href="#">SOBRE</a>
+                <a href="#">CONTATO</a>
+            </nav>
+
+            <div class="acoes">
+
+                <button class="icone" aria-label="Pesquisar">
+                    🔍
+                </button>
+
+                <button id="btnCarrinho" class="icone carrinho-icone" aria-label="Carrinho">
+                    🛒
+                    <span id="quantidadeCarrinho">0</span>
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- CONTEÚDO -->
+    <main>
+
+        <h1>PRODUTOS</h1>
+
+        <section class="produtos">
+
+
+            <!-- CAMISETA -->
+            <article class="card">
+
+                <div class="produto-imagem">
+
+                    <div class="produto-imagem-inner">
+
+                        <div class="produto-frente">
+                            <img
+                                src="img/camiseta-roots.webp"
+                                alt="Camiseta Rock">
+                        </div>
+
+                        <div class="produto-verso">
+                            <img
+                                src="img/modelo-camiseta.webp"
+                                alt="Modelo usando a camiseta Rock">
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="card-conteudo">
+
+                    <h2>CAMISETA ROCK</h2>
+
+                    <p>
+                        Camiseta preta da banda Sepultura.
+                    </p>
+
+                    <p class="preco">
+                        € 25,00
+                    </p>
+
+                    <button class="btn-comprar">
+                        🛒 &nbsp; ADICIONAR AO CARRINHO
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- JAQUETA -->
+            <article class="card">
+
+                <div class="produto-imagem">
+
+                    <div class="produto-imagem-inner">
+
+                        <div class="produto-frente">
+                            <img
+                                src="img/jaqueta-punk.webp"
+                                alt="Jaqueta Punk">
+                        </div>
+
+                        <div class="produto-verso">
+                            <img
+                                src="img/modelo-jaqueta.webp"
+                                alt="Modelo usando a Jaqueta Punk">
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="card-conteudo">
+
+                    <h2>JAQUETA PUNK</h2>
+
+                    <p>
+                        Jaqueta preta com estilo punk e detalhes metálicos.
+                    </p>
+
+                    <p class="preco">
+                        € 59,90
+                    </p>
+
+                    <button class="btn-comprar">
+                        🛒 &nbsp; ADICIONAR AO CARRINHO
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- CALÇA -->
+            <article class="card">
+
+                <div class="produto-imagem">
+
+                    <div class="produto-imagem-inner">
+
+                        <div class="produto-frente">
+                            <img
+                                src="img/calca-jeans.webp"
+                                alt="Calça Jeans">
+                        </div>
+
+                        <div class="produto-verso">
+                            <img
+                                src="img/modelo-calca.webp"
+                                alt="Modelo usando a Calça Jeans">
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="card-conteudo">
+
+                    <h2>CALÇA JEANS</h2>
+
+                    <p>
+                        Calça jeans de estilo moderno e confortável.
+                    </p>
+
+                    <p class="preco">
+                        € 49,90
+                    </p>
+
+                    <button class="btn-comprar">
+                        🛒 &nbsp; ADICIONAR AO CARRINHO
+                    </button>
+
+                </div>
+
+            </article>
+
+
+        </section>
+
+
+        <!-- CARRINHO -->
+        <div id="carrinho" class="carrinho">
+
+            <h2>SEU CARRINHO</h2>
+
+            <p>
+                Seu carrinho está vazio.
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <script src="js/javascript.js"></script>
+
+</body>
+
+</html>
